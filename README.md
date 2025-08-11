@@ -113,14 +113,14 @@ Used for the header container to establish a positioning context for absolutely 
 
 The layout uses a classic three-column approach that was revolutionary for its time:
 
-1. **Left Sidebar (20%)**: Navigation and search functionality
-2. **Main Content (56%)**: Primary recipe content  
-3. **Right Sidebar (20%)**: Fun facts and decorative elements
+1. **Left Sidebar (18%)**: Navigation and search functionality
+2. **Main Content (54%)**: Primary recipe content  
+3. **Right Sidebar (22%)**: Fun facts and decorative elements
 
 **Key Measurements:**
-- Left sidebar: `left: 0, width: 20%`
-- Main content: `left: 22%` (20% + 2% gap), `width: 56%`
-- Right sidebar: `left: 80%` (20% + 56% + 4% gaps), `width: 20%`
+- Left sidebar: `left: 0, width: 18%`
+- Main content: `left: 20%` (18% + 2% gap), `width: 54%`
+- Right sidebar: `left: 76%` (18% + 54% + 4% gaps), `width: 22%`
 
 ### Era-Appropriate Design Choices
 

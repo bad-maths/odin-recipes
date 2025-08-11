@@ -23,20 +23,20 @@ This era marked the first major shift away from HTML tables for layout. Designer
 #left-sidebar {
     position: absolute;
     left: 0;
-    width: 20%;
+    width: 18%;
     height: 100%;
 }
 
 #main-content {
     position: absolute;
-    left: 22%;        /* 20% + 2% gap */
-    width: 56%;
+    left: 20%;        /* 18% + 2% gap */
+    width: 54%;
 }
 
 #right-sidebar {
     position: absolute;
-    left: 80%;        /* 20% + 56% + 4% gaps */
-    width: 20%;
+    left: 76%;        /* 18% + 54% + 4% gaps */
+    width: 22%;
 }
 ```
 
@@ -71,17 +71,17 @@ This era marked the first major shift away from HTML tables for layout. Designer
 - **Classic styling**: Bold colors and decorative fonts
 
 ### Three-Column Layout
-1. **Left Sidebar (20% width)**
+1. **Left Sidebar (18% width)**
    - Navigation menu with GIF button backgrounds
    - Search functionality (non-functional, but styled)
    - Consistent across all pages
 
-2. **Main Content Area (56% width)**
+2. **Main Content Area (54% width)**
    - Recipe information and instructions
    - Floated image and text layout
    - Sarcastic, entertaining content
 
-3. **Right Sidebar (20% width)**
+3. **Right Sidebar (22% width)**
    - Fun facts in yellow boxes
    - Animated cat GIFs (different for each page)
    - Decorative elements
@@ -138,6 +138,33 @@ This era marked the first major shift away from HTML tables for layout. Designer
 - ❌ **Magic numbers**: Hardcoded pixel values throughout CSS
 - ❌ **Cascade conflicts**: Specificity wars as sites grew larger
 - ❌ **Cross-browser testing**: Extensive testing required for each browser
+- ❌ **Box model calculations**: Manual width calculations to prevent horizontal scrolling
+
+## Real-World Problem: The Horizontal Scrollbar Issue
+
+A common problem with this positioning approach was horizontal scrollbars appearing when the total width of elements exceeded the viewport. This happened because:
+
+### The Problem
+```css
+/* Original problematic widths */
+#left-sidebar { width: 20%; padding: 10px; }     /* 20% + 20px */
+#main-content { width: 56%; padding: 10px; }     /* 56% + 20px */ 
+#right-sidebar { width: 20%; padding: 10px; }    /* 20% + 20px */
+/* Total: 96% + 60px of padding = exceeds viewport width */
+```
+
+### The Era-Appropriate Solution
+Since `box-sizing: border-box` wasn't available, developers had to manually reduce percentages:
+
+```css
+/* Fixed widths accounting for padding */
+#left-sidebar { width: 18%; padding: 10px; }     /* Reduced from 20% */
+#main-content { width: 54%; padding: 10px; }     /* Reduced from 56% */
+#right-sidebar { width: 22%; padding: 10px; }    /* Slightly increased for balance */
+/* Total: 94% + 60px padding = fits within viewport */
+```
+
+This type of manual calculation and testing was a daily reality for web developers in this era.
 
 ## Era-Specific Constraints Applied
 
