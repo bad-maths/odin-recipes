@@ -15,11 +15,14 @@ This repository showcases the evolution of web layout design through multiple im
 - Represents how sites were built before CSS adoption
 - [View Demo](./01-table-layout/index.html) | [Learn More](./01-table-layout/README.md)
 
-### 📁 02-css-positioning - Early CSS Era (Late 1990s - Early 2000s)
-**CSS Positioning & Inline Styles** *(Coming Soon)*
-- Absolute and relative positioning
-- Basic CSS properties
-- Transition from HTML attributes to CSS
+### 📁 [02-css-positioning](./02-css-positioning/) - Early CSS Era (Late 1990s - Early 2000s) ✅ **COMPLETED**
+**CSS Positioning & External Stylesheets**
+- Absolute and relative positioning for layout control
+- External CSS files replacing HTML styling attributes
+- Early CSS selectors and properties
+- Web-safe color palettes and system fonts
+- Era-appropriate design aesthetics (inset/outset borders, bold colors)
+- [View Demo](./02-css-positioning/index.html) | [Learn More](./02-css-positioning/README.md)
 
 ### 📁 03-float-layout - CSS Float Era (2000s)
 **CSS Float-Based Layouts** *(Coming Soon)*
@@ -53,6 +56,106 @@ Each implementation demonstrates:
 - **Limitations**: Problems that led to evolution
 - **Browser Support**: What was possible at the time
 - **Best Practices**: What was considered good development
+
+## Deep Dive: CSS Positioning Era (Late 1990s - Early 2000s)
+
+The CSS positioning implementation (`02-css-positioning`) represents a pivotal moment in web development when designers transitioned from table-based layouts to CSS-driven designs. This era introduced several key concepts that revolutionized web layout:
+
+### CSS Positioning Properties Used
+
+#### `position: absolute`
+The cornerstone of this layout approach. Absolutely positioned elements are removed from the normal document flow and positioned relative to their nearest positioned ancestor (or the viewport).
+
+```css
+#left-sidebar {
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: 100%;
+}
+
+#main-content {
+    position: absolute;
+    left: 22%;
+    width: 56%;
+}
+
+#right-sidebar {
+    position: absolute;
+    left: 80%;
+    width: 20%;
+}
+```
+
+**Why This Worked in That Era:**
+- Provided pixel-perfect control over element placement
+- Enabled complex multi-column layouts without tables
+- Allowed overlapping elements (like the chef image)
+- Gave designers the freedom to break free from linear document flow
+
+#### `position: relative`
+Used for the header container to establish a positioning context for absolutely positioned child elements:
+
+```css
+#header {
+    position: relative;
+    /* Chef and sparkles images positioned relative to this container */
+}
+
+#chef {
+    position: absolute;
+    bottom: -18px;
+    left: 64px;
+}
+```
+
+### Layout Strategy: Three-Column Fixed Positioning
+
+The layout uses a classic three-column approach that was revolutionary for its time:
+
+1. **Left Sidebar (20%)**: Navigation and search functionality
+2. **Main Content (56%)**: Primary recipe content  
+3. **Right Sidebar (20%)**: Fun facts and decorative elements
+
+**Key Measurements:**
+- Left sidebar: `left: 0, width: 20%`
+- Main content: `left: 22%` (20% + 2% gap), `width: 56%`
+- Right sidebar: `left: 80%` (20% + 56% + 4% gaps), `width: 20%`
+
+### Era-Appropriate Design Choices
+
+#### Visual Aesthetics
+- **Web-safe colors**: Limited to 216-color palette (#C0C0C0, #000080, #FFFF00)
+- **Inset/outset borders**: Created the classic "3D button" effect
+- **System fonts only**: Arial, sans-serif, cursive, serif
+- **GIF animations**: Cat gifs and sparkle effects for visual interest
+
+#### Technical Constraints Honored
+- **No CSS3 features**: No border-radius, box-shadow, or modern properties
+- **No HTML5 elements**: Strict use of div, p, h1-h3, ul, ol, img, a
+- **Fixed positioning only**: No flexbox, grid, or responsive design
+- **External stylesheets**: Moving away from inline styles and HTML attributes
+
+### Historical Significance
+
+This approach represented several important advances:
+
+1. **Separation of Concerns**: HTML for structure, CSS for presentation
+2. **Reusable Styles**: One stylesheet for multiple pages
+3. **Precise Control**: Exact positioning of elements
+4. **Design Freedom**: Breaking free from table-cell constraints
+
+### Limitations That Led to Evolution
+
+While revolutionary, this approach had significant drawbacks:
+
+- **Fixed layouts**: No responsiveness for different screen sizes
+- **Fragile positioning**: Small changes could break the entire layout
+- **Content overflow**: Absolutely positioned elements don't affect parent height
+- **Accessibility issues**: Screen readers struggled with non-linear layouts
+- **Browser inconsistencies**: IE6 and other browsers rendered positioning differently
+
+These limitations eventually led to the development of float-based layouts, and later flexbox and CSS Grid.
 
 ## How to Use This Repository
 
