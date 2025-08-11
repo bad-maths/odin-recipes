@@ -44,7 +44,7 @@ body {
 #left-sidebar {
     position: absolute;
     left: 0;
-    width: 20%;
+    width: 18%;
     height: 100%;
     padding: 10px;
     background-color: #E0E0E0;
@@ -157,8 +157,8 @@ body {
 /* Main Content */
 #main-content {
     position: absolute;
-    left: 22%;
-    width: 56%;
+    left: 20%;
+    width: 54%;
     padding: 10px;
     background-color: #FFFFFF;
     border: 2px solid #C0C0C0;
@@ -250,8 +250,8 @@ body {
 /* Right Sidebar */
 #right-sidebar {
     position: absolute;
-    left: 80%;
-    width: 20%;
+    left: 76%;
+    width: 22%;
     height: 100%;
     padding: 10px;
     text-align: center;
