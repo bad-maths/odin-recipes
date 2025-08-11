@@ -1,0 +1,367 @@
+/* Late 90s CSS Positioning Layout */
+body {
+    background-color: #C0C0C0;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Header Section */
+#header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #8080FF; 
+    border-bottom: 3px solid #000080;
+    margin-bottom: 8px;
+}
+
+#header .welcome-text {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 68px;
+    font-family: 'Brush Script MT', cursive, serif;
+    color: #FFFF00;
+}
+
+#header h1 a {
+    color: #FFFF00;
+    text-decoration: none;
+}
+
+#header h1 a:hover {
+    color: #FFCCCC;
+}
+
+/* Left Sidebar */
+#left-sidebar {
+    position: absolute;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    background-color: #E0E0E0;
+    border-right: 3px solid #000080;
+}
+
+#left-sidebar h1 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    color: #000;
+}
+
+#left-sidebar h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #000;
+}
+
+#left-sidebar p {
+    margin: 0;
+    color: #000;
+}
+
+.navigation {
+    margin: 0;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 2px;
+    padding: 2px;
+}
+
+.navigation li {
+    position: relative;
+    margin: 10px 0;
+    font-size: 16px;
+ 
+}
+
+.navigation a {
+    color: #FFFF00;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 27px;
+    background-image: url('./images/button.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+
+}
+
+.navigation a:hover {
+    color: #FFCCCC;
+    text-decoration: underline;
+}
+
+.button-background {
+    position: absolute;
+}
+
+/* Search Section */
+.search {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #C0C0C0;
+    border: 3px inset #C0C0C0;
+}
+
+.search h1 {
+    color: #000080;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.search-box {
+    display: block;
+}
+
+.search-box input[type="text"] {
+    width: 120px;
+    padding: 3px;
+    border: 2px inset #C0C0C0;
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.search-box input[type="button"] {
+    width: 70px;
+    padding: 3px;
+    border: 2px outset #C0C0C0;
+    background-color: #C0C0C0;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-box input[type="button"]:hover {
+    background-color: #DDDDDD;
+}
+
+.search-box input[type="button"]:active {
+    border: 2px inset #C0C0C0;
+}
+
+/* Main Content */
+#main-content {
+    position: absolute;
+    left: 22%;
+    width: 56%;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 2px solid #C0C0C0;
+}
+
+
+
+/* Recipe Page Specific Styles */
+.recipe-container {
+    margin-bottom: 20px;
+}
+
+.recipe-image {
+    float: left;
+    width: 40%;
+    margin-right: 20px;
+}
+
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #333;
+}
+
+.recipe-info {
+    float: left;
+    width: 55%;
+}
+
+.recipe-info h1 {
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    color: #000;
+}
+
+.recipe-info h3 {
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+    color: #000;
+}
+
+.recipe-info p {
+    margin: 0 0 15px 0;
+    color: #000;
+    line-height: 1.6;
+}
+
+.recipe-details {
+    clear: both;
+    margin-top: 30px;
+}
+
+.ingredients, .steps {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+}
+
+.ingredients h3, .steps h3 {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+    color: #000080; /* Navy headers */
+    border-bottom: 3px solid #000080; /* Navy underline */
+    padding-bottom: 5px;
+    background-color: #E0E0FF; /* Light blue background */
+    padding: 8px;
+}
+
+.ingredients ul, .steps ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.ingredients li, .steps li {
+    margin: 8px 0;
+    color: #000;
+    line-height: 1.5;
+}
+
+.ingredients ul ul {
+    margin: 10px 0;
+}
+
+.ingredients ul ul li {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+/* Right Sidebar */
+#right-sidebar {
+    position: absolute;
+    left: 80%;
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #E0E0E0; /* Light gray sidebar */
+    border-left: 3px solid #000080; /* Navy border */
+}
+#right-sidebar .fun-fact{
+    text-align: left;
+    margin-bottom: 64px;
+    border-bottom: 3px solid #000080; /* Navy border */
+    background-color: #FFFFCC; /* Light yellow background for fun facts */
+    padding: 10px;
+}
+#right-sidebar img {
+    width: 150px; /* Larger cat gifs */
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Chef Image */
+#chef {
+    position: absolute;
+    bottom: -18px;
+    left: 64px;
+    width: 250px;
+    height: auto;
+}
+
+#sparkles {
+  position: absolute;
+  right: 64px;
+  width: 200px;
+  bottom: -18px;
+  height: auto;
+}
+/* Home Page Content Styles */
+.home-welcome {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #E0E0FF; /* Light blue background */
+    border: 3px solid #000080; /* Navy border */
+}
+
+.home-welcome h2 {
+    font-size: 32px;
+    color: #000080; /* Navy text */
+    margin: 0 0 15px 0;
+}
+
+.home-welcome p {
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    font-style: italic;
+}
+
+.home-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #FFFFCC; /* Light yellow background */
+    border: 2px solid #000080; /* Navy border */
+}
+
+.home-section h3 {
+    font-size: 22px;
+    color: #000080; /* Navy headers */
+    margin: 0 0 15px 0;
+    border-bottom: 2px solid #000080;
+    padding-bottom: 5px;
+}
+
+.home-section ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.home-section li {
+    margin: 8px 0;
+    color: #000;
+    line-height: 1.5;
+}
+
+.featured-recipes {
+    margin-top: 10px;
+}
+
+.featured-item {
+    background-color: #E0E0E0; /* Light gray background */
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #C0C0C0;
+    color: #000;
+}
+
+.featured-item strong {
+    color: #000080; /* Navy for recipe names */
+}
+
+.site-stats {
+    background-color: #E0E0E0; /* Light gray background */
+    padding: 10px;
+    border: 2px solid #C0C0C0;
+}
+
+.site-stats p {
+    margin: 5px 0;
+    color: #000;
+}
+
+.site-stats strong {
+    color: #000080; /* Navy for labels */
+}
